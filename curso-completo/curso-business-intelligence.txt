@@ -1,0 +1,164 @@
+O que vamos aprender?
+
+Geral
+-Modelagem Relacional
+-Modelagem de Datawarehouse
+-ETL com integration Services
+-Cubos com Analysis Services
+-Relatórios com reporting Services
+
+Infraestrutura
+-Virtualização  e configuração de servidores
+-Agendamento de cargas
+-Criação de usuários
+-Instalação dO SQL Server
+-Instalação das ferramentas de BI
+
+Ambiente OLTP
+-Modelagem Relacional
+-Criação de Scripts
+-Preenchimento de tabelas
+
+Staging Area
+-Construção da Staging
+-Limpeza e padronização  dos dados
+
+ETL
+-Carga de Dados com Wizard
+-Carga de Dados para Staging Area
+-Carga de Dados para Datawarehouse
+-Versionamento de dados
+
+Cubos OLAP
+-Criação de Cubos
+-Criação de dimensões
+-Deploy de Cubos
+-Processamento de Cubos
+-Abertura de Cubos no Excel
+
+Relatórios
+-Criação de Relatórios
+-Customização de Relatórios
+-Deploy de Relatórios
+-Export de Relatórios
+
+Integration Services
+-Número de componentes
+-Automatização de cargas
+-Utilização de procedures
+-Versionamento de de Datawarehouse
+
+-Analysis Services
+
+Projeto completo!!!
+
+AULA - O ambiente OLTP e a pirâmide empresarial
+
+Estrategico
+-Acionista
+-Pensamento: Anual
+-Comando mais utilizado: Select
+-OLAP - Ambiente analitico
+-Espelho do ambiente transacional para realização de consultas (outra maquina)
+-Outra modelagem de dados
+-Processamento: baixo
+-Armazenamento: alto
+-Entregar informação rápida para o setor estrátegico
+-Relatórios
+-Datawarehouse
+-Tamém é utilizado: Insert
+-Pode ser: diário / semanal / mensal a carga solicitada
+-Modelagem: STAR
+-Modelagem: Snow Flake
+
+Tático
+-Gerente e coordenadores
+-Pensamento: Médio Prazo
+-Aqui acontece: ETL com: Integration Services, ODI, KETTLE e POwer Center
+-Extrair / transformar / load
+-Staging
+-FK = PK
+-Join - Lookup
+-Lookup (Lento)
+-Dimensão / FATO
+-Cozinha onde tudo acontece
+
+Operacional
+-Chão de fabrica
+-Pensamento: Curto Prazo
+-OLTP - Ambiente transacional
+-Comandos mais utilizados: Update - Insert - Delete
+-Commit / Roolback
+-Formas normais
+-Não pode ter redundancia
+-JOIN
+-Armazenamento baixo
+-Processamento alto
+-FK - chave estrangeira
+-Tabelas
+
+Resumo:
+
+Ambiente OLTP
+Visa reduzir o armazenamento utiliznado normalização de dados (formas normais), e em consequencia, 
+tem um tempo longo de processamento de consulta. É o chão de fabrica de toda empresa. 
+Principal ambiente de trabalho do DBA. Tem maioria dos comandos: Insert, Delete e Update.
+
+Staging Area
+Local de tratamento dos dados que saem do ambiente OLTP e são carregados no ambiente OLAP. utilizado
+por ferramentas ETL.
+
+Ambiente OLAP
+Visa reduzir o tempo de respostas de consultas sumarizadas. O ambiente é desnormalizado, e por isso
+o armazenamento é muito alto. Como consequencia, as consultas são rapidas. É utilizado para tomada de decisão.
+
+Download dos programas:
+
+01 - Windows Server 2016
+01.1 - Alterar nome do Server
+02 - Java
+03 - SQL Server 2017
+04 - Management Studio
+04.1 - Configuração do Reporting Services
+05 - Data Tools para VS Studio 2017
+
+Baixe e instale em sua ultima versão:
+- Server baixo e configura no no Hyper-V (Recomendo)
+- Alterado o nome do Server
+- Instalado o Java
+- Instalar o Firefox
+
+Configuração no windows Server 2016 e 2017 - Necessário para baixar arquivos no server (download)
+- Server Manager - Dashboard
+- Local Server
+- IE Enhanced Security Configuration
+- Está ON 
+- Clique e altere para OFF e OFF
+
+2º Config - Painel de Controle
+- Firewall Windows
+- Desabilite
+Nota: Caso queira, instale tudo e depois habilite novamente.
+
+Instalando e configurando o SQL Server 2017
+
+Instalando e configurando o SSMS
+
+Instalando e configurando - Reporting Services
+
+Verificar os serviços do SQL Server
+-SQL Server Configuration Manager
+
+Instalando o Data Tools
+
+
+
+
+
+
+
+
+
+
+
+

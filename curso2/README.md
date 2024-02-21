@@ -1,5 +1,5 @@
 # Business Intelligence
 
-### Dois cursos completos, abordando totalmente o tema!
+### SUPER ACADEMIA BI - 18 cursos em 1 - tudo em um único lugar
 
 - Repositório com: artigos, aprendizados, exercícios e projetos.

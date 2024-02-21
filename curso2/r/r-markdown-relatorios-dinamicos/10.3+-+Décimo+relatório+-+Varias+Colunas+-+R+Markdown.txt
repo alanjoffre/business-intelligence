@@ -1,0 +1,28 @@
+---
+title: "Varias Colunas"
+output: flexdashboard::flex_dashboard
+---
+    
+Column {data-width=600}
+-------------------------------------
+    
+### Grafico 1
+    
+```{r}
+
+```
+   
+Column {data-width=400}
+-------------------------------------
+   
+### Grafico 2
+
+```{r}
+
+```   
+ 
+### Grafico 3
+    
+```{r}
+
+```

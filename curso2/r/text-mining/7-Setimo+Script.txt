@@ -1,0 +1,59 @@
+####################################
+#Analisando resenha do filme Capitã Marvel
+####################################
+#lendo o arquivo de dados
+setwd("/cloud/project/resenha")
+arquivo <- readLines("capita_marvel.txt",16)
+
+#Preparando o Corpus do Arquivo
+library(tm)
+resenha <- Corpus(VectorSource(arquivo))
+
+
+#Ajustes e Transformações
+## Higienização do texto
+transformacao <- tm_map(resenha, content_transformer(tolower))
+transformacao <- tm_map(transformacao, removeWords, stopwords("pt"))
+transformacao <- tm_map(transformacao, removePunctuation)
+transformacao <- tm_map(transformacao, stripWhitespace)
+transformacao <- tm_map(transformacao, removeNumbers)
+transformacao <- tm_map(transformacao, stemDocument)
+
+#Transformando os dados em números, contendo as frequências
+dtmpalavra <- DocumentTermMatrix(resenha)
+dtmpalavra
+dtmpalavra <- DocumentTermMatrix(transformacao)
+dtmpalavra
+
+#Definindo um valor de corte para as palavras que serão analisadas
+## Descritiva geral
+Allpalavras <- as.matrix(dtmpalavra)
+frequencia <- sort(colSums(Allpalavras), decreasing = TRUE)
+corte <- quantile(frequencia, probs = 0.99) # estabelecida o valor mínimo de frequencia
+#corte <-4
+
+# graficos sobre os dados
+library(lattice)
+library(latticeExtra)
+
+barchart(co ~ seq_along(co),
+         data = data.frame(co = frequencia[frequencia > corte]),
+         axis = axis.grid,
+         horizontal = FALSE,
+         scales = list(
+           x = list(rot = 45, labels = names(frequencia)[frequencia >corte])),
+         panel = function(x, y, ...) {
+           panel.barchart(x, y, ...)
+           panel.text(x, y + 2, y)
+         })
+
+# Associação das palavras - Gráfico
+
+install.packages("BiocManager")
+BiocManager::install("Rgraphviz")
+library(BiocManager)
+
+freq.terms <- findFreqTerms(dtmpalavra, lowfreq = corte)
+
+plot(dtmpalavra, term = freq.terms, corThreshold = 0.1,
+     weighting = TRUE)

@@ -1,0 +1,17 @@
+#Leitura direta da planilha excel, algumas colunas
+library(readxl)
+setwd("/cloud/project/importexport")
+controlerange <- read_excel("controle.xlsx",range = "Alunos!B1:D5")
+          
+
+#Leitura direta da planilha excel, algumas colunas e escolhendo planilha
+library(readxl)
+setwd("/cloud/project/importexport")
+controlerange2 <- read_excel("controle.xlsx",sheet=1,range = "A1:B3")
+
+
+#Leitura direta da planilha excel, nomes colunas em maiúsculo
+library(readxl)
+setwd("/cloud/project/importexport")
+controlerange3 <- read_excel("controle.xlsx",sheet=1,range = "A1:B3",
+                             .name_repair = toupper)

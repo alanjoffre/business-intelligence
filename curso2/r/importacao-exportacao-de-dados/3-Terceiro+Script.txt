@@ -1,0 +1,20 @@
+# leitura com texto acima dos campos
+library(readr)
+setwd("/cloud/project/importexport")
+bairrom <- read_delim("Bairros mundiais.txt", delim = ";")
+head(bairrom)
+
+# leitura com texto acima dos campos, função skip
+setwd("/cloud/project/importexport")
+bairromskip <- read_delim("Bairros mundiais.txt", delim = ";",skip =2)
+head(bairrom)
+
+# leitura com texto acima dos campos, função skip e trocando campos
+setwd("/cloud/project/importexport")
+bairromcol <- read_delim("Bairros mundiais.txt", delim = ";",skip =3,col_names=c("logradouros","numeros"))
+head(bairrom)
+
+# leitura com texto acima dos campos, skip para partes
+setwd("/cloud/project/importexport")
+bairromcolskip <- read_delim("Bairros mundiais.txt", delim = ";",skip =8,col_names=c("logradouros","numeros"))
+head(bairrom)

@@ -1,0 +1,14 @@
+# Dados da Estrutura Organizacional do Poder Executivo Federal 
+# Carrega o pacote rio
+library(jsonlite)
+library(rio)
+install_formats()
+setwd("/cloud/project/importexport")
+# Carrega o banco de dados do CPI 2015
+arqjson <- import("estrutura.json")
+
+# visualizando dados
+arqjson$servico
+arqjson$unidades
+sigla<- arqjson$unidades$sigla
+sigla

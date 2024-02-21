@@ -1,0 +1,30 @@
+# leitura de api para o R
+
+# Primeiro carregar pacotes
+library("httr")
+library("jsonlite")
+
+# Onde está localizada a aPI
+
+url <- "http://www.transparencia.gov.br/api-de-dados/despesas/por-orgao?ano="
+ano<-2019
+orgaoSuperior<-26000
+orgao<-26258
+pagina<-1
+chamada <- paste(url,ano,"&orgaoSuperior=",orgaoSuperior,"&orgao=",orgao,"&pagina=", pagina, sep="")
+chamada
+#Obtendo os dados
+get_dados <- GET(chamada, type = "basic")
+get_dados
+
+#Obtendo em texto
+get_texto <- content(get_dados, "text")
+get_texto
+
+#Os dados voltam em Json
+get_json <- fromJSON(get_texto, flatten = TRUE)
+get_json
+
+#Transforma para Data Frame
+get_dataframe <- as.data.frame(get_json)
+get_dataframe 

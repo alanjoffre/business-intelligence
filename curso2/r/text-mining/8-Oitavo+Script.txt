@@ -1,0 +1,145 @@
+####################################
+#Analisando ficha jogador site: ogol.com.br
+####################################
+#Dados sobre Zico - jogador do flamengo
+library(rvest)
+library(stringr)
+jogador <- read_html("https://www.ogol.com.br/text.php?id=11681")  
+sobre_jogador <-  jogador %>% 
+  html_nodes("p") %>%
+  html_text()
+
+# Concatenando todas as linhas sobre a pesquisa do jogador
+concat_pesquisa <- str_c(sobre_jogador)
+
+# Na história do jogador, busca a palavra Galinho
+str_detect(sobre_jogador, "Galinho")
+
+# analisando as frases que a palavra é definida
+frase_busca<- str_subset(sobre_jogador, "Galinho")
+
+#Posição(número da linha) onde encontramos a palavra pesquisada
+str_which(sobre_jogador, "Galinho")
+
+#Quantas vezes a palavra escolhida foi mencionada
+str_count(sobre_jogador, "Galinho")
+
+#Substituir a palavra pesquisada por outra palavra
+str_replace_all(sobre_jogador, "Galinho", "Quintino")
+
+#Mapa de palavras
+library(wordcloud)
+wordcloud(sobre_jogador, max.words = 20)
+
+#################### Transformação e Limpeza nos dados #########
+library(tm)
+transforme_sobre_jogador <- tolower(sobre_jogador) # Minusculo
+transforme_sobre_jogador <- removePunctuation(transforme_sobre_jogador) # retira pontuação
+transforme_sobre_jogador  <- removeNumbers(transforme_sobre_jogador) # retira numeros
+transforme_sobre_jogador <- stripWhitespace(transforme_sobre_jogador) # retira espacos em branco
+
+
+# Stopwords
+stopwords_pt <- c(stopwords("pt"), "o", "é", "do")
+#antes da Stopwords
+wordcloud(transforme_sobre_jogador, max.words = 30)
+#depois da Stopwords
+transforme_sobre_jogador  <- removeWords(transforme_sobre_jogador , stopwords_pt)
+wordcloud(transforme_sobre_jogador, max.words = 30)
+
+######## stem - criação de um documento com o radical das palavras. ex. "pensamento, pensativo" seria reduzido para pensar
+### não é uma implementação muito boa
+stem_jogador <- stemDocument(transforme_sobre_jogador, language = "portuguese")
+
+
+########## Tokenização ############
+tokens_jogador <- str_split(transforme_sobre_jogador, " ")
+unlist(tokens_jogador)
+
+######### Corpus ################
+#Serão aplicados os mesmos tratamentos anteriores no texto, agora como corpus
+corpus_jogador <-VCorpus(VectorSource(sobre_jogador))
+
+#Remover pontuação
+corpus_jogador <- tm_map(corpus_jogador, removePunctuation)
+#Remover números
+corpus_jogador <- tm_map(corpus_jogador, removeNumbers)
+#Remover Stopwords
+corpus_jogador <- tm_map(corpus_jogador, removeWords, stopwords("pt"))
+
+#######Geração da Matriz documentos - Termos #########
+dtm_jogador <- DocumentTermMatrix(corpus_jogador)
+
+#Exibindo alguns dados, a frequência do termos de 3 até o 9 em linhas do texto
+as.matrix(dtm_jogador[,3:9])
+
+#Quais termos tem frequência maior que 5
+findFreqTerms(dtm_jogador, 5)
+
+########### criando a abordagem com objetos Tidy #############
+library(tidytext)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+### Criando um novo dataframe com os dados sobre o jogador
+jogador_new_df <- data_frame(text = sobre_jogador)
+
+########## Tokenização ############
+
+#Criação de token
+jogador_new_token <- jogador_new_df %>%
+  unnest_tokens(word, text)
+
+# Avaliando a frequência das palavras
+jogador_new_token %>%
+  count(word, sort = TRUE)
+
+#Retirando as stop words
+stopwords_portu <- c(stopwords("pt"), "flamengo","o","é")
+stopwords_portu_df <- data.frame(word = stopwords_portu)
+
+jogador_new_token <- jogador_new_token %>%
+  anti_join(stopwords_portu_df, by = "word")
+
+jogador_new_token %>%
+  count(word, sort = TRUE)
+
+# Gráfico com os termos mais frequentes
+jogador_new_token %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 9) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  xlab(NULL) +
+  coord_flip()
+
+##########NGRAMS - ocorrência conjunta de termos  ############
+## BIgrams - token de 2 palavras
+## Ngrams - token de n palavras
+
+jogador_bigrams <- jogador_new_df %>%
+  unnest_tokens(bigram, text, token = "ngrams", n = 2)
+
+# Ordem dos Bigrams
+jogador_bigrams %>%
+  count(bigram, sort = TRUE)
+
+# excluindo palavras pelo stopwords
+bigrams_new <- jogador_bigrams %>%
+  separate(bigram, c("p1", "p2"), sep = " ")
+
+#filtrando sem as palavras stopwords
+bigrams_new<- bigrams_new%>%
+  filter(!p1 %in% stopwords_portu ) %>%
+  filter(!p2 %in% stopwords_portu )
+
+freq_bigram <- bigrams_new %>% 
+  count(p1,p2,sort = TRUE)
+freq_bigram
+#Pesquisando a ocorrência da palavra zico
+freq_bigram %>%
+  filter(p1== "zico") %>%
+  count(p2,sort = TRUE)
+### fim do script ###

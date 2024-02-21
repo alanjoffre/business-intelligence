@@ -1,0 +1,4 @@
+copy public.venda_postgres
+from 'C:\Carga\Vendas.csv'
+delimiter ';'
+csv header

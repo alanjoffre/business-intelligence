@@ -1,0 +1,20 @@
+# leitura, número máximo de linhas a serem lidas
+setwd("/cloud/project/importexport")
+dolardelim22 <- read.delim2("valor dolar.txt",sep = ";",dec=".",nrows=5)
+head(dolardelim22)
+
+# leitura, próximas linhas a serem lidas
+setwd("/cloud/project/importexport")
+dolardelim23 <- read_delim("valor dolar.txt",delim = ";",skip=6,col_names=c("Data","Valor Dolar"))
+head(dolardelim23)
+
+# leitura, linhas em branco não podem ser ignoradas
+setwd("/cloud/project/importexport")
+dolardelim24 <- read.delim2("valor dolar.txt",sep = ";",dec=".",blank.lines.skip = FALSE)
+head(dolardelim24)
+
+# leitura, transformando a coluna de fator para caracter
+setwd("/cloud/project/importexport")
+dolardelim24 <- read.delim2("valor dolar.txt",sep = ";",dec=".",blank.lines.skip = FALSE,stringsAsFactors = FALSE)
+head(dolardelim25)
+str(dolardelim25)

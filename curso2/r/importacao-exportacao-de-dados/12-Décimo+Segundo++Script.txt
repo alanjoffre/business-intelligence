@@ -1,0 +1,12 @@
+#Leitura direta da planilha excel, algumas colunas
+library(readr)
+setwd("/cloud/project/importexport")
+dadosLATIN1 <- read_delim("Bairros mundiais.txt", delim = ";",
+                    locale = locale(encoding = "latin1"))
+
+
+#Leitura direta da planilha excel, algumas colunas
+library(readr)
+setwd("/cloud/project/importexport")
+dadosLATIN2 <- read_delim("Bairros mundiais.txt", delim = ";",
+                          locale = locale(encoding = "UTF-8"))

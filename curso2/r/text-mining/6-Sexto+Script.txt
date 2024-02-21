@@ -1,0 +1,85 @@
+####################################
+#Analisando opiniões sobre o saque emergencial
+####################################
+#download dar arquivos léxicos
+library(textdata)
+library(tidytext)
+
+get_sentiments("afinn")
+get_sentiments("bing")
+get_sentiments("nrc")
+
+
+####################################
+#Leitura dos arquivos de opiniao
+
+library(tm)
+setwd("/cloud/project/opiniao")
+arquivotxt <- c("/cloud/project/opiniao")
+textos <- VCorpus(DirSource(arquivotxt, encoding = "UTF-8"),readerControl = list(language = "lat"))
+
+#instalando pacotes
+#instalando pacotes
+#install.packages("tidyr")
+#install.packages("dplyr")
+#install.packages("tidytext")
+#install.packages("ggplot2") 
+#install.packages("wordcloud") 
+#install.packages("RColorBrewer") 
+library(tidyr)
+library(dplyr)
+library(tidytext)
+library(tibble)
+library(ggplot2)
+library(wordcloud)
+library(RColorBrewer)
+
+##### Ajustes e transformações ######
+
+#Transformando de Corpus para Tibble
+opiniao <-tidy(textos)
+
+#Coloca no formato apropriado de token
+conversao_opiniao <- opiniao %>%
+  unnest_tokens(word, text)
+
+#agrupando palavras
+word_grupo <- conversao_opiniao %>%
+  count(id, word, sort = TRUE) %>%
+  ungroup()
+
+#Analisando a frequência das palavras por texto
+tf_idf <- word_grupo %>%
+  bind_tf_idf(word, id, n) %>%
+  arrange(desc(tf_idf))
+
+#Gráfico da frequência de palavras
+tf_idf %>%
+  group_by(id) %>%
+  top_n(12, tf_idf) %>%
+  ungroup() %>%
+  mutate(word = reorder(word, tf_idf)) %>%
+  ggplot(aes(word, tf_idf, fill = id)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ id, scales = "free") +
+  ylab("tf-idf") +
+  coord_flip()
+
+#Preparacao da análise de sentimento, calculando valores.
+#Estamos usando o léxico Afinn, pois oferece os valores por sentimento
+#Outros Léxico "bing", "afinn", "loughran", "nrc"
+
+grupo_sentimento <- word_grupo %>%
+  inner_join(get_sentiments("afinn"), by = "word") %>%
+  group_by(id) %>%
+  summarize(value = sum(value * n) / sum(n))
+
+
+#gráfico de sentimento, opiniao da Folha tem menos negatividade que o do correio Braziliense
+grupo_sentimento %>%
+  mutate(recodifica = reorder(id, value)) %>%
+  ggplot(aes(recodifica, value, fill = value > 0)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  ylab("Valor da Análise sentimento")+
+  xlab("Textos")

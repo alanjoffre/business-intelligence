@@ -1,0 +1,58 @@
+# _site.yml
+name: "Site: Trienamento R Markdown"
+navbar:
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Exemplo 2"
+      href: Exemplo2.html
+    - text: "Exemplo 3"
+      href: Exemplo3.html
+output:
+  html_document:
+    theme: united
+    highlight: tango
+    
+
+
+# Index.Rmd
+---
+title: "Home"
+output: html_document
+---
+### *Construção de Sites com Relatórios do R* {style="padding-top: 0px;"}
+
+Criação de relatórios com o formato HTML para que você utilize em seus sites.Utilizamos 2 arquivos no formato .Rmd que são randerizados para o formato HTML e em seguida exibidos aqui.
+
+Clique nas abas #Exemplo2 e Exemplo3
+
+#Exemplo2
+---
+title: "Exemplo2"
+output: html_document
+---
+
+###  PLOT 1
+    
+```{r}
+
+set.seed(123)
+n <- 1000
+x1  <- matrix(rnorm(n), ncol = 2)
+x2  <- matrix(rnorm(n, mean = 3, sd = 1.5), ncol = 2)
+x   <- rbind(x1, x2)
+smoothScatter(x, xlab = "x1", ylab = "x2")
+
+```
+#Exemplo3
+---
+title: "Exemplo3"
+output: html_document
+---
+
+```{r}
+x=seq(-pi,pi,length=50)
+y=x
+f=outer(x,y,function(x,y)cos(y)/(1+x^2))
+contour(x,y,f)
+```

@@ -1,0 +1,22 @@
+# gravação de um arquivo no R
+setwd("/cloud/project/importexport")
+write.table(bairrom, file = "saidabairrom.csv")
+
+# gravação de um arquivo no R
+write.table(bairrom, file = "saidabairrom2.csv",
+sep = "@@@", dec = ",")
+
+# Gravação em diversos formatos
+library(haven)
+library(rio)
+x= rnorm(10,45)
+y= rnorm(10,23)
+resultado = data.frame(x,y)
+# Exporta para .sav - SPSS
+write_sav(resultado, "banco.sav")
+
+# Exporta para .dta - STATA
+write_dta(resultado, "banco.dta")
+
+# Exporta para .json - JSON
+export(resultado, "banco.json")

@@ -1,0 +1,21 @@
+#Leitura direta da planilha excel, alterando o tipo das colunas
+library(readxl)
+setwd("/cloud/project/importexport")
+controletipo <- read_excel("controle.xlsx",
+                           sheet = 2,
+                           col_types = c("text","text","text","numeric"))
+
+#Leitura direta da planilha excel, alterando todos os tipos das colunas
+library(readxl)
+setwd("/cloud/project/importexport")
+controletipo2 <- read_excel("controle.xlsx",
+                            sheet = 2,
+                            col_types = rep("text", 4))
+
+
+#Leitura direta da planilha excel, total de registros
+library(readxl)
+setwd("/cloud/project/importexport")
+controlemax <- read_excel("controle.xlsx",
+                          sheet =3,
+                          n_max=4)

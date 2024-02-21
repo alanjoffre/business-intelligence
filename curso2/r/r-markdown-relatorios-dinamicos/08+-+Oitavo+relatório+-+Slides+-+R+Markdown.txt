@@ -1,0 +1,72 @@
+---
+title: "Apresentação de Infográficos "
+output: 
+    revealjs::revealjs_presentation:
+    template: quarterly-report.html
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(viridis)
+```
+
+Iremos demonstrar uma série de infográficos que podem ser exibidos via slides
+
+>- Apresentação dos votos
+>- Gráfico de dispersão com pontos com carros
+>- Gráfico de dispersão 
+>- Treemap do Grupo G20
+>- Agradecimento
+ 
+
+## Apresentação dos votos
+
+```{r}
+library(waffle)
+waffle(
+  c('Yes=70%' = 70, 'No=30%' = 30), rows = 10, colors = c("#FD6F6F", "#93FB98"),
+  title = 'Responses', legend_pos="bottom"
+)
+```
+
+## Gráfico de dispersão com pontos com carros
+```{r}
+library(ggplot2)
+ggplot (mtcars)  +  
+  geom_text( aes ( mpg , wt , colour = factor ( cyl )), 
+             label =  "\uf1b9" , 
+             family =  "FontAwesome" , 
+             size =  7)
+```
+
+## Gráfico de dispersão 
+
+```{r}
+library(ggplot2)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+```
+
+##  Treemap do Grupo G20
+
+```{r}
+library(ggplot2)
+library(treemapify)
+ggplot(G20, aes(area = gdp_mil_usd, fill = region, label = country, subgroup = region)) +
+  geom_treemap() +
+  geom_treemap_text(grow = T, reflow = T, colour = "black") +
+  facet_wrap( ~ hemisphere) +
+  scale_fill_brewer(palette = "Set1") +
+  theme(legend.position = "bottom") +
+  labs(
+    title = "The G-20 major economies by hemisphere",
+    caption = "The area of each tile represents the country's GDP as a
+      proportion of all countries in that hemisphere",
+    fill = "Region"
+  )
+```
+
+## Agradecimento
+
+Muito obrigado 

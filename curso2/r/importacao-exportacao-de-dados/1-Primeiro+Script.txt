@@ -1,0 +1,4 @@
+library(readr)
+setwd("/cloud/project/importexport")
+times <- read_delim("times futebol paises.csv", delim = ";")
+head(times)

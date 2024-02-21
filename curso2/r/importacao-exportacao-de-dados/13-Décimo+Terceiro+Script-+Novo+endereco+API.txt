@@ -1,0 +1,27 @@
+# leitura de api para o R
+
+# Primeiro carregar pacotes
+library("httr")
+library("jsonlite")
+
+# Onde está localizada a aPI
+
+url <- "https://reqres.in/api/users/"
+usuario<-3
+chamada <- paste(url,usuario)
+chamada
+#Obtendo os dados
+get_dados <- GET(chamada, type = "basic")
+get_dados
+
+#Obtendo em texto
+get_texto <- content(get_dados, "text")
+get_texto
+
+#Os dados voltam em Json
+get_dataframe <- fromJSON(get_texto, flatten = TRUE)
+get_dataframe 
+
+#Transforma para Data Frame
+get_dataframe <- as.data.frame(get_json)
+get_dataframe 

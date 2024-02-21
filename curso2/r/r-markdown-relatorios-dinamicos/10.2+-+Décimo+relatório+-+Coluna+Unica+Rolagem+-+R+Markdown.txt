@@ -1,0 +1,24 @@
+---
+title: "Coluna Unica Rolagem"
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+---
+
+### Grafico 1
+    
+```{r}
+
+```
+    
+### Grafico 2
+
+```{r}
+
+```
+
+### Grafico 3
+
+```{r}
+
+```

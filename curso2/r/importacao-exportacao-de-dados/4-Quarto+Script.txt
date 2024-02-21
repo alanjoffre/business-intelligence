@@ -1,0 +1,14 @@
+# leitura, reconhecendo o campo valor como numerico
+setwd("/cloud/project/importexport")
+dolardelim <- read.delim("valor dolar.txt",sep = ";")
+head(dolardelim)
+
+# leitura, NAO reconhecendo o campo valor como numerico
+setwd("/cloud/project/importexport")
+dolardelim2 <- read.delim2("valor dolar.txt",sep = ";")
+head(dolardelim2)
+
+# leitura, reconhecendo o campo valor como numerico
+setwd("/cloud/project/importexport")
+dolardelim21 <- read.delim2("valor dolar.txt",sep = ";",dec=".")
+head(dolardelim21)

@@ -1,0 +1,36 @@
+# Lollipop Chart
+library(ggplot2)
+
+ggplot(cotacao_dolar, aes(x=dia_cotacao, y=valor)) +
+  geom_segment( aes(x=dia_cotacao, xend=dia_cotacao, y=0, yend=valor) , size=1, color="blue", linetype="dotdash" ) +
+  geom_point()
+
+
+#variação1
+ggplot(cotacao_dolar, aes(x=dia_cotacao, y=valor)) +
+  geom_segment( aes(x=dia_cotacao, xend=dia_cotacao, y=0, yend=valor), color="grey") +
+  geom_point( color="orange", size=4) +
+  theme_light() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.x = element_blank()
+  ) +
+  xlab("Dia") +
+  ylab("Valor do Dólar")
+
+#Variação2
+ggplot(cotacao_dolar, aes(x=dia_cotacao, y=valor)) +
+  geom_segment( aes(x=dia_cotacao, xend=dia_cotacao, y=0, yend=valor), color="skyblue") +
+  geom_point( color="blue", size=4, alpha=0.6) +
+  theme_light() +
+  coord_flip() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  ) +
+  xlab("Dia") +
+  ylab("Valor do Dólar") +
+  ggtitle("Evolução preço do Dólar") +
+  theme(plot.title = element_text(hjust = 0.5))

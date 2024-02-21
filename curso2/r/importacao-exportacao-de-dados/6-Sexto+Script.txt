@@ -1,0 +1,19 @@
+#Leitura direta da planilha excel
+library(readxl)
+setwd("/cloud/project/importexport")
+controle <- read_excel("controle.xlsx")
+head(controle)
+
+#Leitura direta da planilha excel, escolhendo a planilha 2
+library(readxl)
+setwd("/cloud/project/importexport")
+controleplan2 <- read_excel("controle.xlsx",sheet = 2)
+head(controle)
+
+#Leitura direta da planilha excel, escolhendo a planilha 1, escolhendo a coluna 2
+install.packages("xlsx")
+library(xlsx)
+controlecoluna <- read.xlsx2("controle.xlsx", 
+                             sheetIndex = 1, 
+                             startRow=1, 
+                             colIndex = 2)

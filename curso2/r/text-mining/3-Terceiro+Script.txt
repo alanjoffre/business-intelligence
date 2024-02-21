@@ -1,0 +1,62 @@
+#Carregando dados sobre a economia das regiões do Brasil
+library(tm)
+setwd("/cloud/project/poemas")
+arquivotxt <- c("/cloud/project/economia")
+textos <- VCorpus(DirSource(arquivotxt, encoding = "UTF-8"),readerControl = list(language = "lat"))
+VCorpus(VectorSource(textos))
+
+
+# inspeciojnando os arquivos
+inspect(textos[1:5])
+
+# identificando os textos
+meta(textos[[1]], "id")
+meta(textos[[2]], "id")
+meta(textos[[3]], "id")
+meta(textos[[4]], "id")
+meta(textos[[5]], "id")
+
+#visualizando os dados
+inspect(textos[[1]])
+inspect(textos[[2]])
+
+#Visualizacao dos dados informando quantidade de linhas
+lapply(textos[1:5], as.character)
+
+#####################################
+#        TRANSFORMACOES             #
+#####################################
+
+# Retirando os espaços em branco
+textostrans <- tm_map(textos, stripWhitespace)
+inspect(textostrans[[1]])
+
+# Transformando todos os caracteres para minusculo, para uniformizar
+textostrans  <- tm_map(textostrans, content_transformer(tolower))
+inspect(textostrans[[1]])
+
+# utilizando o arquivo de stowords
+stopwords("pt")
+textostrans <- tm_map(textostrans, removeWords, stopwords("pt"))
+inspect(textostrans[[1]])
+inspect(textostrans[[2]])
+
+#  Criação da Matriz Termo-Frequencia, informações sobre os termos mais esparsos
+matriztf <- DocumentTermMatrix(textostrans)
+inspect(matriztf)
+
+#Analisar determinado termo pela frequencia de ocorrencias
+findFreqTerms(matriztf,10)
+
+# Encontrar correlação entre os termos
+findAssocs(matriztf, "região",0.8)
+findAssocs(matriztf, "produção",0.8)
+findAssocs(matriztf, "industrial",0.8)
+
+# exibe os termos com pouca esparcividade, 
+#somente os termos que aparecem em (quase) x % em todos os documentos serão mantidos.
+inspect(removeSparseTerms(matriztf, 0.21))
+
+
+#Avaliação de determinados termos dentro dos documentos
+inspect(DocumentTermMatrix(textostrans,list(dictionary = c("região", "produção", "industrial"))))

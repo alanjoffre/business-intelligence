@@ -1,0 +1,14 @@
+## Arquivo Temperatura Porto Alegre - Barras
+barragraf<-ggplot(temperatura_porto_alegre, aes(codigo_estacao)) 
+barragraf+ geom_bar()
+
+#variação1
+ggplot(temperatura_porto_alegre)+geom_bar(aes(y=codigo_estacao))
+
+#variação2
+barragraf<-ggplot(temperatura_porto_alegre, aes(umid_inst)) 
+barragraf + geom_bar(aes(fill = codigo_estacao))
+
+#variação3
+barragraf<-ggplot(temperatura_porto_alegre, aes(umid_inst)) 
+barragraf + geom_bar(aes(fill = codigo_estacao)) + theme(legend.position = "top")

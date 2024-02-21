@@ -1,0 +1,93 @@
+####################################
+#Analisando discursos dos presidentes
+####################################
+#http://www.itamaraty.gov.br/pt-BR/discursos-artigos-e-entrevistas-categoria/presidente-da-republica-federativa-do-brasil-discursos
+
+library(tm)
+setwd("/cloud/project/poemas")
+arquivotxt <- c("/cloud/project/reportagem")
+textos <- VCorpus(DirSource(arquivotxt, encoding = "UTF-8"),readerControl = list(language = "lat"))
+
+#instalando pacotes
+install.packages("tidyr")
+install.packages("dplyr")
+install.packages("tidytext")
+install.packages("ggplot2") 
+install.packages("wordcloud") 
+install.packages("RColorBrewer") 
+library(tidyr)
+library(dplyr)
+library(tidytext)
+library(tibble)
+library(ggplot2)
+library(wordcloud)
+library(RColorBrewer)
+
+##### Ajustes e transformações ######
+#Transformando de Corpus para Tibble
+discurso_presidente <-tidy(textos)
+
+#Retirando as palavras stopwords
+stopwords_pt <- c(stopwords("pt"), "é", "sr", "sra","todos")
+stopwords_pt_df <- data.frame(word = stopwords_pt)
+discurso_presidente <- discurso_presidente %>%
+  unnest_tokens(word, text) %>%
+  anti_join(stopwords_pt_df, by = "word")
+
+# Contando as palavras mais comuns nos discursos de todos os presidentes
+discurso_presidente %>%
+  count(word, sort = TRUE)
+
+# Todas as palavras mais ditas, gravadas em um dataframe
+
+todas_as_palavras <- discurso_presidente %>%
+  count(id, word) %>%
+  bind_tf_idf(word, id, n) 
+
+# Ordenando todas as palavras mais ditas, gravadas em um dataframe
+todas_as_palavras <- todas_as_palavras %>%
+  arrange(desc(todas_as_palavras))
+
+#Wordcloud
+set.seed(1234)
+wordcloud(words = todas_as_palavras$word, freq = todas_as_palavras$n, min.freq = 1,max.words=500, random.order=FALSE, rot.per=0.35,colors=brewer.pal(8, "Dark2"))
+
+
+
+#####################################################################
+#Avaliando as palavras mais especificas do discurso Presidente Dilma
+#####################################################################
+#Ajustes e Transformação
+
+# Retirando os espaços em branco
+textostrans <- tm_map(textos, stripWhitespace)
+
+# Transformando todos os caracteres para minúsculo, para uniformizar
+textostrans  <- tm_map(textostrans, content_transformer(tolower))
+
+# utilizando o arquivo de stopwords
+stopwords_pt <- c(stopwords("pt"), "para", "que", "é", "isso","senhor")
+textostrans <- tm_map(textostrans, removeWords, stopwords_pt)
+inspect(textostrans[[1]])
+
+#Conversão de objeto Corpus em Tibble
+matriztf <- DocumentTermMatrix(textostrans)
+reportagem_palavras <- tidy(matriztf)
+reportagem_palavras
+
+#Calculando o tf-idf de cada par termo-fala para avaliar as mais importantes 
+palavras_dilma <- reportagem_palavras %>%
+  bind_tf_idf(term, document, count) %>%
+  arrange(desc(tf_idf))
+
+#filtrando as palavras mais importantes da Presidente Dilma
+palavras_dilma<- filter(palavras_dilma, document == "Discurso de Dilma Rousseff na ONU.txt" & tf > 0.00598)
+
+#Gráfico de barra com as palavras mais importantes da Presidente Dilma
+ggplot(palavras_dilma, aes(x = term, y = tf)) +
+  geom_col(fill = "dodgerblue") +
+  labs(title = "Discurso presidente",
+       subtitle = "Dilma",
+       x = "Palavras",
+       y = "Mais faladas")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))

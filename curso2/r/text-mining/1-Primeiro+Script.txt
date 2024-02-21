@@ -1,0 +1,6 @@
+install.packages("tm")
+library(tm)
+library(NLP)
+# testando a identificação de arquivos
+docs <- c("meu primeiro texto", "entrada de dados")
+Texto <- VCorpus(VectorSource(docs))

@@ -1,0 +1,424 @@
+--------------------------------------------------------
+--
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Sequence SQ_AUTOR
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_AUTOR"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_EDITORA
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_EDITORA"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_FUNC_ARQ_MORTO
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_FUNC_ARQ_MORTO"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_FUNCIONARIO
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_FUNCIONARIO"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_ITENS_PEDIDO
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_ITENS_PEDIDO"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_LIVRO
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_LIVRO"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_LIVRO_AUTOR
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_LIVRO_AUTOR"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_LOG
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_LOG"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 81 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SQ_PEDIDO
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "SQ_PEDIDO"  MINVALUE 1 MAXVALUE 999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Table TB_AUTOR
+--------------------------------------------------------
+
+  CREATE TABLE "TB_AUTOR" 
+   (	"ID_AUTOR" NUMBER(*,0), 
+	"NOME" VARCHAR2(50), 
+	"SEXO" CHAR(1), 
+	"DATA_NASCIMENTO" DATE
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_EDITORA
+--------------------------------------------------------
+
+  CREATE TABLE "TB_EDITORA" 
+   (	"ID_EDITORA" NUMBER(*,0), 
+	"DESCRICAO" VARCHAR2(30), 
+	"ENDERECO" VARCHAR2(70)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_FUNC_ARQ_MORTO
+--------------------------------------------------------
+
+  CREATE TABLE "TB_FUNC_ARQ_MORTO" 
+   (	"ID_FUNC_ARQ_MORTO" NUMBER(*,0), 
+	"NOME" VARCHAR2(50)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_FUNCIONARIO
+--------------------------------------------------------
+
+  CREATE TABLE "TB_FUNCIONARIO" 
+   (	"ID_FUNCIONARIO" NUMBER(*,0), 
+	"NOME" VARCHAR2(50), 
+	"SEXO" CHAR(1)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_ITENS_PEDIDO
+--------------------------------------------------------
+
+  CREATE TABLE "TB_ITENS_PEDIDO" 
+   (	"ID_ITENS_PEDIDO" NUMBER(*,0), 
+	"ID_LIVRO" NUMBER(*,0), 
+	"ID_PEDIDO" NUMBER(*,0), 
+	"QUANTIDADE" NUMBER(*,0), 
+	"PRECO" NUMBER(9,2)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_LIVRO
+--------------------------------------------------------
+
+  CREATE TABLE "TB_LIVRO" 
+   (	"ID_LIVRO" NUMBER(*,0), 
+	"ISBN" CHAR(10), 
+	"TITULO" VARCHAR2(50), 
+	"EDICAO" NUMBER(*,0), 
+	"PRECO" NUMBER(9,2), 
+	"ID_EDITORA" NUMBER(*,0), 
+	"QTDE_ESTOQUE" NUMBER(*,0)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_LIVRO_AUTOR
+--------------------------------------------------------
+
+  CREATE TABLE "TB_LIVRO_AUTOR" 
+   (	"ID_LIVRO_AUTOR" NUMBER(*,0), 
+	"ID_LIVRO" NUMBER(*,0), 
+	"ID_AUTOR" NUMBER(*,0)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_LOG
+--------------------------------------------------------
+
+  CREATE TABLE "TB_LOG" 
+   (	"ID_LOG" NUMBER(*,0), 
+	"USUARIO" VARCHAR2(50), 
+	"DATA" DATE, 
+	"OPERACAO" VARCHAR2(50)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_LOTACAO
+--------------------------------------------------------
+
+  CREATE TABLE "TB_LOTACAO" 
+   (	"ID_LOTACAO" NUMBER(*,0), 
+	"SIGLA" VARCHAR2(30), 
+	"ID_LOTACAO_PAI" NUMBER(*,0)
+   ) ;
+--------------------------------------------------------
+--  DDL for Table TB_PEDIDO
+--------------------------------------------------------
+
+  CREATE TABLE "TB_PEDIDO" 
+   (	"ID_PEDIDO" NUMBER(*,0), 
+	"DATA_PEDIDO" DATE, 
+	"DATA_ENTREGA" DATE
+   ) ;
+---------------------------------------------------
+--   DATA FOR TABLE TB_FUNCIONARIO
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_FUNCIONARIO
+Insert into TB_FUNCIONARIO (ID_FUNCIONARIO,NOME,SEXO) values (1,'João','M');
+Insert into TB_FUNCIONARIO (ID_FUNCIONARIO,NOME,SEXO) values (2,'Carla','F');
+Insert into TB_FUNCIONARIO (ID_FUNCIONARIO,NOME,SEXO) values (3,'Osvaldo','M');
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_FUNCIONARIO
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_LIVRO
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_LIVRO
+Insert into TB_LIVRO (ID_LIVRO,ISBN,TITULO,EDICAO,PRECO,ID_EDITORA,QTDE_ESTOQUE) values (1,'1234567890','Banco de Dados',2,10,1,407);
+Insert into TB_LIVRO (ID_LIVRO,ISBN,TITULO,EDICAO,PRECO,ID_EDITORA,QTDE_ESTOQUE) values (2,'2345678901','Redes de Computadores',1,10,2,60);
+Insert into TB_LIVRO (ID_LIVRO,ISBN,TITULO,EDICAO,PRECO,ID_EDITORA,QTDE_ESTOQUE) values (3,'3456789012','Interface Homem-Máquina',3,10,1,10);
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_LIVRO
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_FUNC_ARQ_MORTO
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_FUNC_ARQ_MORTO
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_FUNC_ARQ_MORTO
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_PEDIDO
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_PEDIDO
+Insert into TB_PEDIDO (ID_PEDIDO,DATA_PEDIDO,DATA_ENTREGA) values (1,to_timestamp('01/01/10 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'),to_timestamp('10/01/10 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_PEDIDO (ID_PEDIDO,DATA_PEDIDO,DATA_ENTREGA) values (2,to_timestamp('05/01/10 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'),to_timestamp('15/01/10 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_PEDIDO
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_LOTACAO
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_LOTACAO
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (1,'CENTRAL',null);
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (2,'SETOR NORTE',1);
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (3,'SETOR SUL',1);
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (4,'SETOR NORTE-OESTE',2);
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (5,'SETOR SUL-LESTE',3);
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (6,'SETOR ALFA',4);
+Insert into TB_LOTACAO (ID_LOTACAO,SIGLA,ID_LOTACAO_PAI) values (7,'SETOR GAMA',5);
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_LOTACAO
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_LIVRO_AUTOR
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_LIVRO_AUTOR
+Insert into TB_LIVRO_AUTOR (ID_LIVRO_AUTOR,ID_LIVRO,ID_AUTOR) values (1,1,1);
+Insert into TB_LIVRO_AUTOR (ID_LIVRO_AUTOR,ID_LIVRO,ID_AUTOR) values (2,1,2);
+Insert into TB_LIVRO_AUTOR (ID_LIVRO_AUTOR,ID_LIVRO,ID_AUTOR) values (3,2,3);
+Insert into TB_LIVRO_AUTOR (ID_LIVRO_AUTOR,ID_LIVRO,ID_AUTOR) values (4,3,2);
+Insert into TB_LIVRO_AUTOR (ID_LIVRO_AUTOR,ID_LIVRO,ID_AUTOR) values (5,3,3);
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_LIVRO_AUTOR
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_AUTOR
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_AUTOR
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (1,'João','M',to_timestamp('01/01/70 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (2,'Maria','F',to_timestamp('17/05/74 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (3,'José','M',to_timestamp('20/10/76 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (22,'carla','F',to_timestamp('10/10/80 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (23,'paula','F',to_timestamp('10/10/80 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (27,'Mario','M',to_timestamp('10/10/70 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+Insert into TB_AUTOR (ID_AUTOR,NOME,SEXO,DATA_NASCIMENTO) values (42,'----MARIAZINHA----','F',to_timestamp('28/10/54 00:00:00,000000000','DD/MM/RR HH24:MI:SS,FF'));
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_AUTOR
+---------------------------------------------------
+
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_ITENS_PEDIDO
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_ITENS_PEDIDO
+Insert into TB_ITENS_PEDIDO (ID_ITENS_PEDIDO,ID_LIVRO,ID_PEDIDO,QUANTIDADE,PRECO) values (1,1,1,1,100);
+Insert into TB_ITENS_PEDIDO (ID_ITENS_PEDIDO,ID_LIVRO,ID_PEDIDO,QUANTIDADE,PRECO) values (21,2,1,1,100);
+Insert into TB_ITENS_PEDIDO (ID_ITENS_PEDIDO,ID_LIVRO,ID_PEDIDO,QUANTIDADE,PRECO) values (26,1,2,3,50);
+Insert into TB_ITENS_PEDIDO (ID_ITENS_PEDIDO,ID_LIVRO,ID_PEDIDO,QUANTIDADE,PRECO) values (27,1,2,3,50);
+Insert into TB_ITENS_PEDIDO (ID_ITENS_PEDIDO,ID_LIVRO,ID_PEDIDO,QUANTIDADE,PRECO) values (28,1,2,3,50);
+Insert into TB_ITENS_PEDIDO (ID_ITENS_PEDIDO,ID_LIVRO,ID_PEDIDO,QUANTIDADE,PRECO) values (29,1,2,50,50);
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_ITENS_PEDIDO
+---------------------------------------------------
+
+---------------------------------------------------
+--   DATA FOR TABLE TB_EDITORA
+--   FILTER = none used
+---------------------------------------------------
+REM INSERTING into TB_EDITORA
+Insert into TB_EDITORA (ID_EDITORA,DESCRICAO,ENDERECO) values (1,'Campus','Rua do Timbó');
+Insert into TB_EDITORA (ID_EDITORA,DESCRICAO,ENDERECO) values (2,'Abril',null);
+
+---------------------------------------------------
+--   END DATA FOR TABLE TB_EDITORA
+---------------------------------------------------
+--------------------------------------------------------
+--  Constraints for Table TB_AUTOR
+--------------------------------------------------------
+
+  ALTER TABLE "TB_AUTOR" ADD CONSTRAINT "CK_SEXO" CHECK (Sexo in ('M','F')) ENABLE;
+ 
+  ALTER TABLE "TB_AUTOR" ADD CONSTRAINT "PK_AUTOR" PRIMARY KEY ("ID_AUTOR") ENABLE;
+ 
+  ALTER TABLE "TB_AUTOR" MODIFY ("ID_AUTOR" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_AUTOR" MODIFY ("NOME" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_AUTOR" MODIFY ("SEXO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_AUTOR" MODIFY ("DATA_NASCIMENTO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_EDITORA
+--------------------------------------------------------
+
+  ALTER TABLE "TB_EDITORA" ADD CONSTRAINT "PK_EDITORA" PRIMARY KEY ("ID_EDITORA") ENABLE;
+ 
+  ALTER TABLE "TB_EDITORA" MODIFY ("ID_EDITORA" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_EDITORA" MODIFY ("DESCRICAO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_FUNC_ARQ_MORTO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_FUNC_ARQ_MORTO" ADD CONSTRAINT "PK_FUNC_ARQ_MORTO" PRIMARY KEY ("ID_FUNC_ARQ_MORTO") ENABLE;
+ 
+  ALTER TABLE "TB_FUNC_ARQ_MORTO" MODIFY ("ID_FUNC_ARQ_MORTO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_FUNC_ARQ_MORTO" MODIFY ("NOME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_FUNCIONARIO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_FUNCIONARIO" ADD CONSTRAINT "PK_FUNCIONARIO" PRIMARY KEY ("ID_FUNCIONARIO") ENABLE;
+ 
+  ALTER TABLE "TB_FUNCIONARIO" MODIFY ("ID_FUNCIONARIO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_FUNCIONARIO" MODIFY ("NOME" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_FUNCIONARIO" MODIFY ("SEXO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_ITENS_PEDIDO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_ITENS_PEDIDO" ADD CONSTRAINT "PK_ITENS_PEDIDO" PRIMARY KEY ("ID_ITENS_PEDIDO") ENABLE;
+ 
+  ALTER TABLE "TB_ITENS_PEDIDO" MODIFY ("ID_ITENS_PEDIDO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_ITENS_PEDIDO" MODIFY ("ID_LIVRO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_ITENS_PEDIDO" MODIFY ("ID_PEDIDO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_ITENS_PEDIDO" MODIFY ("QUANTIDADE" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_ITENS_PEDIDO" MODIFY ("PRECO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_LIVRO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LIVRO" ADD CONSTRAINT "PK_LIVRO" PRIMARY KEY ("ID_LIVRO") ENABLE;
+ 
+  ALTER TABLE "TB_LIVRO" MODIFY ("ID_LIVRO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LIVRO" MODIFY ("ISBN" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LIVRO" MODIFY ("TITULO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LIVRO" MODIFY ("EDICAO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LIVRO" MODIFY ("ID_EDITORA" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_LIVRO_AUTOR
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LIVRO_AUTOR" ADD CONSTRAINT "PK_LIVRO_AUTOR" PRIMARY KEY ("ID_LIVRO_AUTOR") ENABLE;
+ 
+  ALTER TABLE "TB_LIVRO_AUTOR" MODIFY ("ID_LIVRO_AUTOR" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LIVRO_AUTOR" MODIFY ("ID_LIVRO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LIVRO_AUTOR" MODIFY ("ID_AUTOR" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_LOG
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LOG" ADD CONSTRAINT "PK_LOG" PRIMARY KEY ("ID_LOG") ENABLE;
+ 
+  ALTER TABLE "TB_LOG" MODIFY ("ID_LOG" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LOG" MODIFY ("USUARIO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LOG" MODIFY ("DATA" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LOG" MODIFY ("OPERACAO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_LOTACAO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LOTACAO" ADD CONSTRAINT "PK_LOTACAO" PRIMARY KEY ("ID_LOTACAO") ENABLE;
+ 
+  ALTER TABLE "TB_LOTACAO" MODIFY ("ID_LOTACAO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_LOTACAO" MODIFY ("SIGLA" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table TB_PEDIDO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_PEDIDO" ADD CONSTRAINT "PK_PEDIDO" PRIMARY KEY ("ID_PEDIDO") ENABLE;
+ 
+  ALTER TABLE "TB_PEDIDO" MODIFY ("ID_PEDIDO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_PEDIDO" MODIFY ("DATA_PEDIDO" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TB_PEDIDO" MODIFY ("DATA_ENTREGA" NOT NULL ENABLE);
+
+--------------------------------------------------------
+--  Ref Constraints for Table TB_ITENS_PEDIDO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_ITENS_PEDIDO" ADD CONSTRAINT "FK_ITENS_PEDIDO_LIVRO" FOREIGN KEY ("ID_LIVRO")
+	  REFERENCES "TB_LIVRO" ("ID_LIVRO") ENABLE;
+ 
+  ALTER TABLE "TB_ITENS_PEDIDO" ADD CONSTRAINT "FK_ITENS_PEDIDO_PEDIDO" FOREIGN KEY ("ID_PEDIDO")
+	  REFERENCES "TB_PEDIDO" ("ID_PEDIDO") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TB_LIVRO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LIVRO" ADD CONSTRAINT "FK_LIVRO_EDITORA" FOREIGN KEY ("ID_EDITORA")
+	  REFERENCES "TB_EDITORA" ("ID_EDITORA") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table TB_LIVRO_AUTOR
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LIVRO_AUTOR" ADD CONSTRAINT "FK_LIVRO_AUTOR_AUTOR" FOREIGN KEY ("ID_AUTOR")
+	  REFERENCES "TB_AUTOR" ("ID_AUTOR") ENABLE;
+ 
+  ALTER TABLE "TB_LIVRO_AUTOR" ADD CONSTRAINT "FK_LIVRO_AUTOR_LIVRO" FOREIGN KEY ("ID_LIVRO")
+	  REFERENCES "TB_LIVRO" ("ID_LIVRO") ENABLE;
+
+--------------------------------------------------------
+--  Ref Constraints for Table TB_LOTACAO
+--------------------------------------------------------
+
+  ALTER TABLE "TB_LOTACAO" ADD CONSTRAINT "FK_LOTACAO_LOTACAO" FOREIGN KEY ("ID_LOTACAO_PAI")
+	  REFERENCES "TB_LOTACAO" ("ID_LOTACAO") ENABLE;
+
+
+/
+

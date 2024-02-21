@@ -1,0 +1,12 @@
+# Activate the `XML` library
+library(XML)
+setwd("/cloud/project/importexport")
+xmlfile <- xmlParse(file="receita.xml")
+print(xmlfile)
+
+raiz=xmlRoot(xmlfile)
+print(raiz[1])
+
+titulo=xmlToDataFrame(getNodeSet(xmlfile,"//receita/titulo"))
+ingrediente=xmlToDataFrame(getNodeSet(xmlfile,"//receita/ingredientes/ingrediente"))
+passos=xmlToDataFrame(getNodeSet(xmlfile,"//instrucoes/passo"))

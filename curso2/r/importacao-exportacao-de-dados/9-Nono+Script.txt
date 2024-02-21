@@ -1,0 +1,33 @@
+#Leitura direta da planilha excel, algumas colunas
+library(readxl)
+setwd("/cloud/project/importexport")
+controlefaixa <- read_excel("controle.xlsx", 
+                            range = cell_rows(10:15), 
+                            col_names = TRUE)
+
+
+#Leitura direta da planilha excel, algumas colunas e planilha
+library(readxl)
+setwd("/cloud/project/importexport")
+controlefaixa2 <- read_excel("controle.xlsx",
+                             sheet = "Alunos",
+                             range = cell_rows(10:15), 
+                             col_names = FALSE)
+
+#Leitura direta da planilha excel, cabeçalho primeira linha 3 caracteres
+library(readxl)
+setwd("/cloud/project/importexport")
+controlefaixa3 <- read_excel("controle.xlsx",
+                             sheet = "Alunos",
+                             range = cell_rows(10:15), 
+                             col_names=TRUE,
+                             .name_repair = ~ substr(.x, start = 1, stop = 3))
+
+#Leitura direta da planilha excel, cabeçalho letras do alfabeto
+library(readxl)
+setwd("/cloud/project/importexport")
+controlefaixa3 <- read_excel("controle.xlsx",
+                             sheet = "Alunos",
+                             range = cell_rows(10:15), 
+                             col_names=FALSE,
+                             .name_repair = ~ ifelse(nzchar(.x), .x, LETTERS[seq_along(.x)]))

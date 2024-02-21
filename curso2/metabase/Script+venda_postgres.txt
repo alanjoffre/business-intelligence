@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS public.venda_postgres
+(
+    id_venda integer NOT NULL,
+    cod_vendedor integer,
+    cod_produto integer,
+    cod_departamento integer,
+    dtc_venda date,
+    qtd_venda integer,
+    val_venda numeric(10,2) DEFAULT NULL::numeric,
+    num_nota integer NOT NULL,
+    CONSTRAINT stg_venda_pkeys PRIMARY KEY (id_venda)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.stg_venda
+    OWNER to postgres;

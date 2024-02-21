@@ -1,0 +1,414 @@
+dia-semana;situacao;momento-dia;temp;pista;Vitimas
+segunda-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;3
+quinta-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Multipla            ;4
+sexta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;3
+sexta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Simples             ;4
+quarta-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;4
+sexta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+domingo;Feridas;Plena Noite         ;Nublado             ;Multipla            ;3
+segunda-feira;Feridas;Amanhecer           ;Nublado             ;Dupla               ;3
+quarta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;0
+quarta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;0
+quinta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;0
+sexta-feira;Feridas;Amanhecer           ;Ceu Claro           ;Dupla               ;0
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;0
+quinta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Multipla            ;0
+domingo;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Simples             ;2
+terca-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Multipla            ;2
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+quarta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;2
+sexta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Sem Vitimas;Pleno dia           ;Sol                 ;Dupla               ;1
+sexta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;1
+sexta-feira;Sem Vitimas;Pleno dia           ;Nublado             ;Simples             ;2
+sabado;Feridas;Amanhecer           ;Chuva               ;Simples             ;3
+domingo;Feridas;Plena Noite         ;Chuva               ;Dupla               ;4
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;5
+quinta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;6
+segunda-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;5
+terca-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;3
+terca-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+quinta-feira;Feridas;Anoitecer           ;Nublado             ;Dupla               ;2
+quarta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Simples             ;2
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Garoa/Chuvisco      ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;2
+quarta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Multipla            ;1
+sexta-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Dupla               ;1
+segunda-feira;Feridas;Amanhecer           ;Nublado             ;Multipla            ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Simples             ;1
+quarta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Simples             ;1
+sexta-feira;Sem Vitimas;Amanhecer           ;Ceu Claro           ;Multipla            ;1
+segunda-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;2
+quarta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;2
+quinta-feira;Feridas;Anoitecer           ;Ceu Claro           ;Simples             ;1
+segunda-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+sexta-feira;Feridas;Plena Noite         ;Chuva               ;Dupla               ;1
+domingo;Sem Vitimas;Plena Noite         ;Chuva               ;Dupla               ;1
+domingo;Sem Vitimas;Plena Noite         ;Chuva               ;Dupla               ;1
+segunda-feira;Feridas;Anoitecer           ;Ceu Claro           ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+sexta-feira;Feridas;Anoitecer           ;Chuva               ;Simples             ;1
+sexta-feira;Feridas;Anoitecer           ;Nublado             ;Multipla            ;1
+segunda-feira;Sem Vitimas;Pleno dia           ;Sol                 ;Dupla               ;1
+segunda-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;1
+terca-feira;Feridas;Plena Noite         ;Ceu Claro           ;Simples             ;1
+sexta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;1
+sexta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Simples             ;1
+segunda-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;1
+terca-feira;Feridas;Plena Noite         ;Nublado             ;Dupla               ;1
+quarta-feira;Feridas;Pleno dia           ;Garoa/Chuvisco      ;Dupla               ;1
+segunda-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;1
+quinta-feira;Sem Vitimas;Pleno dia           ;Nublado             ;Dupla               ;1
+sexta-feira;Sem Vitimas;Pleno dia           ;Garoa/Chuvisco      ;Dupla               ;1
+sabado;Sem Vitimas;Plena Noite         ;Garoa/Chuvisco      ;Dupla               ;1
+sexta-feira;Feridas;Plena Noite         ;Chuva               ;Dupla               ;1
+sabado;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+domingo;Fatais;Plena Noite         ;Chuva               ;Dupla               ;1
+domingo;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+segunda-feira;Sem Vitimas;Plena Noite         ;Nublado             ;Dupla               ;1
+quarta-feira;Sem Vitimas;Anoitecer           ;Nublado             ;Multipla            ;1
+sabado;Feridas;Plena Noite         ;Chuva               ;Dupla               ;1
+quarta-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;1
+quinta-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;1
+sabado;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;2
+domingo;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+terca-feira;Sem Vitimas;Amanhecer           ;Ceu Claro           ;Multipla            ;2
+sabado;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+sabado;Sem Vitimas;Pleno dia           ;Chuva               ;Dupla               ;2
+segunda-feira;Fatais;Pleno dia           ;Chuva               ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;2
+quarta-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;2
+quarta-feira;Fatais;Pleno dia           ;Nublado             ;Dupla               ;2
+sexta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+sexta-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+sabado;Feridas;Amanhecer           ;Nublado             ;Multipla            ;2
+domingo;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+segunda-feira;Sem Vitimas;Plena Noite         ;Nublado             ;Dupla               ;2
+terca-feira;Sem Vitimas;Pleno dia           ;Nublado             ;Multipla            ;2
+quinta-feira;Feridas;Pleno dia           ;Sol                 ;Simples             ;2
+sexta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Simples             ;2
+sexta-feira;Feridas;Pleno dia           ;Sol                 ;Multipla            ;2
+sabado;Feridas;Amanhecer           ;Nublado             ;Dupla               ;2
+sabado;Feridas;Pleno dia           ;Nublado             ;Dupla               ;2
+terca-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Simples             ;2
+sexta-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Multipla            ;2
+sabado;Feridas;Plena Noite         ;Garoa/Chuvisco      ;Dupla               ;2
+segunda-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;2
+segunda-feira;Feridas;Plena Noite         ;Nublado             ;Dupla               ;2
+quarta-feira;Sem Vitimas;Pleno dia           ;Nublado             ;Multipla            ;2
+quarta-feira;Feridas;Pleno dia           ;Garoa/Chuvisco      ;Dupla               ;2
+quinta-feira;Sem Vitimas;Pleno dia           ;Nublado             ;Simples             ;1
+sexta-feira;Feridas;Amanhecer           ;Ceu Claro           ;Dupla               ;1
+segunda-feira;Feridas;Plena Noite         ;Nublado             ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;1
+terca-feira;Feridas;Anoitecer           ;Nublado             ;Dupla               ;1
+quarta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+sexta-feira;Feridas;Amanhecer           ;Chuva               ;Dupla               ;1
+sexta-feira;Fatais;Plena Noite         ;Chuva               ;Dupla               ;1
+quinta-feira;Sem Vitimas;Plena Noite         ;Nublado             ;Dupla               ;1
+sexta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+domingo;Feridas;Plena Noite         ;Chuva               ;Dupla               ;1
+segunda-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;1
+quinta-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Multipla            ;2
+sexta-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Dupla               ;2
+sexta-feira;Feridas;Pleno dia           ;Nublado             ;Multipla            ;2
+domingo;Sem Vitimas;Amanhecer           ;Ceu Claro           ;Dupla               ;2
+quinta-feira;Feridas;Anoitecer           ;Nublado             ;Dupla               ;1
+segunda-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Dupla               ;2
+sabado;Feridas;Anoitecer           ;Nublado             ;Dupla               ;1
+quinta-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;1
+domingo;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+segunda-feira;Feridas;Anoitecer           ;Ceu Claro           ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Fatais;Pleno dia           ;Sol                 ;Dupla               ;1
+sexta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Multipla            ;1
+sexta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+terca-feira;Feridas;Plena Noite         ;Nublado             ;Multipla            ;1
+terca-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;1
+domingo;Feridas;Pleno dia           ;Chuva               ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;1
+terca-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+quarta-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;1
+quarta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Feridas;Anoitecer           ;Sol                 ;Dupla               ;1
+quinta-feira;Feridas;Anoitecer           ;Nublado             ;Multipla            ;1
+segunda-feira;Sem Vitimas;Pleno dia           ;Garoa/Chuvisco      ;Dupla               ;1
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+segunda-feira;Sem Vitimas;Pleno dia           ;Sol                 ;Dupla               ;1
+domingo;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+sexta-feira;Feridas;Pleno dia           ;Nublado             ;Dupla               ;1
+domingo;Feridas;Pleno dia           ;Sol                 ;Dupla               ;1
+quinta-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;1
+sexta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;1
+domingo;Sem Vitimas;Plena Noite         ;Garoa/Chuvisco      ;Dupla               ;1
+sabado;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+sabado;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+sabado;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Multipla            ;1
+quinta-feira;Feridas;Pleno dia           ;Garoa/Chuvisco      ;Multipla            ;2
+sabado;Feridas;Plena Noite         ;Nublado             ;Dupla               ;2
+sabado;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+sabado;Fatais;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+segunda-feira;Feridas;Anoitecer           ;Ceu Claro           ;Dupla               ;2
+quarta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+quarta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+quarta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Multipla            ;2
+quinta-feira;Sem Vitimas;Plena Noite         ;Nublado             ;Simples             ;2
+sexta-feira;Feridas;Anoitecer           ;Ceu Claro           ;Dupla               ;2
+domingo;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Chuva               ;Dupla               ;2
+sexta-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+domingo;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+domingo;Feridas;Amanhecer           ;Nublado             ;Multipla            ;2
+domingo;Feridas;Plena Noite         ;Ceu Claro           ;Multipla            ;2
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+domingo;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+segunda-feira;Feridas;Pleno dia           ;Sol                 ;Dupla               ;2
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+sexta-feira;Sem Vitimas;Pleno dia           ;Chuva               ;Multipla            ;2
+sexta-feira;Feridas;Amanhecer           ;Ceu Claro           ;Dupla               ;2
+sexta-feira;Sem Vitimas;Anoitecer           ;Ceu Claro           ;Dupla               ;2
+domingo;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+sexta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Simples             ;2
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Simples             ;2
+quinta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+sexta-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+sabado;Feridas;Pleno dia           ;Chuva               ;Multipla            ;1
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;1
+quarta-feira;Feridas;Pleno dia           ;Sol                 ;Multipla            ;1
+sexta-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+domingo;Feridas;Pleno dia           ;Nublado             ;Multipla            ;1
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;1
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+quinta-feira;Sem Vitimas;Plena Noite         ;Nublado             ;Dupla               ;1
+quinta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+sabado;Sem Vitimas;Plena Noite         ;Chuva               ;Dupla               ;1
+domingo;Feridas;Plena Noite         ;Chuva               ;Dupla               ;1
+terca-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+terca-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Multipla            ;2
+sexta-feira;Sem Vitimas;Pleno dia           ;Ceu Claro           ;Dupla               ;2
+sexta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+domingo;Sem Vitimas;Pleno dia           ;Chuva               ;Multipla            ;1
+quarta-feira;Sem Vitimas;Plena Noite         ;Ceu Claro           ;Dupla               ;2
+sexta-feira;Feridas;Plena Noite         ;Ceu Claro           ;Dupla               ;1
+domingo;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;1
+segunda-feira;Feridas;Pleno dia           ;Ceu Claro           ;Multipla            ;1
+quinta-feira;Feridas;Pleno dia           ;Ceu Claro           ;Dupla               ;1
+segunda-feira;Feridas;Plena Noite         ;Chuva               ;Dupla               ;1
+domingo;Feridas;Plena Noite         ;Nublado             ;Dupla               ;1
+quarta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+domingo;Feridas;Pleno dia;Sol;Dupla;1
+terca-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;1
+quarta-feira;Sem Vitimas;Amanhecer;Chuva;Multipla;1
+sabado;Feridas;Pleno dia;Sol;Multipla;1
+segunda-feira;Feridas;Plena Noite;Ceu Claro;Multipla;1
+quarta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+quarta-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;1
+quinta-feira;Feridas;Plena Noite;Ceu Claro;Simples;1
+quinta-feira;Feridas;Plena Noite;Ceu Claro;Dupla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sabado;Feridas;Anoitecer;Ceu Claro;Simples;1
+quarta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Multipla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Multipla;1
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+domingo;Feridas;Pleno dia;Nublado;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sabado;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Multipla;1
+terca-feira;Sem Vitimas;Pleno dia;Sol;Multipla;1
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sexta-feira;Sem Vitimas;Pleno dia;Ceu Claro;Multipla;2
+segunda-feira;Feridas;Pleno dia;Sol;Dupla;2
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+sexta-feira;Feridas;Pleno dia;Sol;Dupla;2
+sabado;Feridas;Pleno dia;Ceu Claro;Multipla;2
+sabado;Feridas;Pleno dia;Ceu Claro;Dupla;2
+sabado;Fatais;Plena Noite;Ceu Claro;Multipla;2
+domingo;Feridas;Pleno dia;Nublado;Dupla;2
+domingo;Feridas;Pleno dia;Nublado;Dupla;2
+quarta-feira;Sem Vitimas;Pleno dia;Sol;Dupla;2
+segunda-feira;Feridas;Pleno dia;Sol;Dupla;2
+quinta-feira;Feridas;Plena Noite;Nublado;Dupla;2
+sexta-feira;Feridas;Pleno dia;Chuva;Dupla;2
+quinta-feira;Feridas;Pleno dia;Sol;Dupla;2
+domingo;Feridas;Plena Noite;Sol;Dupla;2
+domingo;Feridas;Pleno dia;Sol;Multipla;2
+terca-feira;Sem Vitimas;Anoitecer;Nublado;Dupla;2
+quinta-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Pleno dia;Sol;Dupla;2
+segunda-feira;Feridas;Pleno dia;Chuva;Dupla;2
+quinta-feira;Sem Vitimas;Plena Noite;Ceu Claro;Multipla;2
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+domingo;Feridas;Anoitecer;Nublado;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Simples;2
+quarta-feira;Feridas;Anoitecer;Ceu Claro;Dupla;2
+quinta-feira;Sem Vitimas;Plena Noite;Chuva;Dupla;2
+sabado;Fatais;Pleno dia;Ceu Claro;Dupla;1
+domingo;Feridas;Plena Noite;Ceu Claro;Dupla;1
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+quinta-feira;Feridas;Plena Noite;Ceu Claro;Multipla;1
+sexta-feira;Feridas;Pleno dia;Nublado;Dupla;1
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+terca-feira;Feridas;Pleno dia;Nublado;Multipla;1
+quarta-feira;Feridas;Amanhecer;Chuva;Multipla;1
+sabado;Feridas;Pleno dia;Ceu Claro;Multipla;1
+domingo;Feridas;Pleno dia;Ceu Claro;Dupla;1
+segunda-feira;Sem Vitimas;Pleno dia;Sol;Multipla;1
+segunda-feira;Sem Vitimas;Pleno dia;Nublado;Dupla;2
+quinta-feira;Feridas;Plena Noite;Garoa/Chuvisco;Dupla;2
+sexta-feira;Feridas;Pleno dia;Chuva;Dupla;2
+sexta-feira;Feridas;Plena Noite;Chuva;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+segunda-feira;Feridas;Plena Noite;Nublado;Multipla;2
+terca-feira;Sem Vitimas;Pleno dia;Chuva;Dupla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sabado;Feridas;Pleno dia;Sol;Dupla;1
+terca-feira;Feridas;Amanhecer;Chuva;Dupla;1
+sabado;Feridas;Pleno dia;Chuva;Multipla;1
+sabado;Feridas;Pleno dia;Chuva;Dupla;1
+segunda-feira;Feridas;Pleno dia;Chuva;Dupla;1
+terca-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;1
+quinta-feira;Feridas;Pleno dia;Nublado;Multipla;1
+quinta-feira;Sem Vitimas;Plena Noite;Nublado;Multipla;1
+sexta-feira;Feridas;Pleno dia;Chuva;Dupla;1
+domingo;Feridas;Plena Noite;Ceu Claro;Dupla;1
+segunda-feira;Feridas;Pleno dia;Nublado;Dupla;1
+quarta-feira;Sem Vitimas;Pleno dia;Chuva;Dupla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Dupla;1
+segunda-feira;Fatais;Plena Noite;Nublado;Multipla;1
+quarta-feira;Feridas;Plena Noite;Ceu Claro;Dupla;1
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sexta-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+quarta-feira;Sem Vitimas;Pleno dia;Chuva;Dupla;1
+sabado;Feridas;Plena Noite;Nublado;Dupla;1
+quinta-feira;Feridas;Pleno dia;Chuva;Multipla;1
+quarta-feira;Feridas;Plena Noite;Ceu Claro;Multipla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sexta-feira;Feridas;Plena Noite;Garoa/Chuvisco;Dupla;1
+domingo;Feridas;Plena Noite;Nublado;Dupla;1
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+segunda-feira;Feridas;Pleno dia;Nublado;Dupla;1
+quarta-feira;Feridas;Anoitecer;Chuva;Dupla;1
+segunda-feira;Feridas;Plena Noite;Nublado;Dupla;1
+terca-feira;Feridas;Plena Noite;Nublado;Dupla;2
+quarta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Plena Noite;Nublado;Dupla;2
+quarta-feira;Feridas;Pleno dia;Ceu Claro;Simples;2
+quarta-feira;Feridas;Plena Noite;Ceu Claro;Multipla;2
+sexta-feira;Feridas;Pleno dia;Garoa/Chuvisco;Multipla;2
+sabado;Feridas;Plena Noite;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+sabado;Sem Vitimas;Plena Noite;Ceu Claro;Dupla;2
+segunda-feira;Sem Vitimas;Plena Noite;Nublado;Dupla;2
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+terca-feira;Sem Vitimas;Plena Noite;Nublado;Multipla;2
+domingo;Feridas;Pleno dia;Sol;Multipla;2
+domingo;Feridas;Plena Noite;Ceu Claro;Multipla;2
+quarta-feira;Feridas;Plena Noite;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Pleno dia;Chuva;Dupla;2
+terca-feira;Feridas;Pleno dia;Nublado;Multipla;2
+terca-feira;Feridas;Anoitecer;Nublado;Multipla;2
+terca-feira;Feridas;Plena Noite;Ceu Claro;Dupla;2
+quarta-feira;Feridas;Pleno dia;Garoa/Chuvisco;Simples;2
+sexta-feira;Sem Vitimas;Plena Noite;Nublado;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Plena Noite;Ceu Claro;Dupla;2
+quinta-feira;Feridas;Pleno dia;Nublado;Dupla;2
+sabado;Feridas;Plena Noite;Ceu Claro;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+terca-feira;Sem Vitimas;Pleno dia;Ceu Claro;Multipla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sabado;Feridas;Amanhecer;Nublado;Dupla;1
+segunda-feira;Feridas;Anoitecer;Nublado;Multipla;1
+terca-feira;Feridas;Pleno dia;Nublado;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+quarta-feira;Feridas;Pleno dia;Sol;Dupla;1
+quarta-feira;Feridas;Plena Noite;Ceu Claro;Dupla;1
+sexta-feira;Sem Vitimas;Pleno dia;Ceu Claro;Multipla;1
+terca-feira;Feridas;Pleno dia;Sol;Dupla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Multipla;1
+domingo;Feridas;Plena Noite;Ceu Claro;Dupla;1
+quarta-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;2
+sabado;Feridas;Pleno dia;Nublado;Multipla;2
+sabado;Feridas;Pleno dia;Ceu Claro;Multipla;2
+domingo;Fatais;Plena Noite;Ceu Claro;Multipla;2
+terca-feira;Feridas;Pleno dia;Ceu Claro;Simples;1
+terca-feira;Feridas;Plena Noite;Ceu Claro;Multipla;2
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sabado;Sem Vitimas;Pleno dia;Chuva;Multipla;1
+sabado;Fatais;Plena Noite;Ceu Claro;Dupla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Multipla;1
+segunda-feira;Feridas;Plena Noite;Ceu Claro;Dupla;1
+domingo;Feridas;Plena Noite;Ceu Claro;Multipla;1
+terca-feira;Feridas;Plena Noite;Ceu Claro;Dupla;1
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+sexta-feira;Feridas;Plena Noite;Ceu Claro;Multipla;1
+sabado;Feridas;Pleno dia;Ceu Claro;Simples;1
+quarta-feira;Feridas;Plena Noite;Ceu Claro;Dupla;1
+sabado;Feridas;Plena Noite;Garoa/Chuvisco;Dupla;1
+sabado;Sem Vitimas;Plena Noite;Garoa/Chuvisco;Dupla;1
+terca-feira;Sem Vitimas;Pleno dia;Chuva;Multipla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+segunda-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;1
+domingo;Feridas;Pleno dia;Ceu Claro;Multipla;1
+segunda-feira;Sem Vitimas;Pleno dia;Ceu Claro;Dupla;1
+terca-feira;Feridas;Plena Noite;Nublado;Multipla;1
+quarta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+sabado;Feridas;Plena Noite;Ceu Claro;Dupla;1
+domingo;Feridas;Plena Noite;Ceu Claro;Multipla;1
+domingo;Fatais;Plena Noite;Ceu Claro;Dupla;1
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;1
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Simples;1
+sexta-feira;Feridas;Anoitecer;Nublado;Simples;1
+sabado;Feridas;Pleno dia;Ceu Claro;Dupla;1
+quarta-feira;Sem Vitimas;Pleno dia;Chuva;Multipla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+terca-feira;Feridas;Pleno dia;Nublado;Simples;2
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+sexta-feira;Feridas;Anoitecer;Ceu Claro;Dupla;2
+sexta-feira;Feridas;Pleno dia;Chuva;Dupla;2
+segunda-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+terca-feira;Feridas;Plena Noite;Ceu Claro;Dupla;2
+terca-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+terca-feira;Feridas;Pleno dia;Ceu Claro;Multipla;2
+terca-feira;Fatais;Amanhecer;Nublado;Dupla;2
+quarta-feira;Feridas;Plena Noite;Nublado;Simples;2
+quinta-feira;Feridas;Plena Noite;Ceu Claro;Dupla;2
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+quarta-feira;Feridas;Pleno dia;Sol;Multipla;2
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+sabado;Feridas;Plena Noite;Ceu Claro;Dupla;2
+sabado;Feridas;Anoitecer;Ceu Claro;Dupla;2
+domingo;Feridas;Pleno dia;Ceu Claro;Multipla;2
+domingo;Feridas;Pleno dia;Ceu Claro;Multipla;2
+quinta-feira;Feridas;Pleno dia;Ceu Claro;Dupla;2
+quinta-feira;Feridas;Anoitecer;Ceu Claro;Multipla;2
+sexta-feira;Feridas;Pleno dia;Ceu Claro;Simples;2
+sexta-feira;Fatais;Pleno dia;Ceu Claro;Simples;2

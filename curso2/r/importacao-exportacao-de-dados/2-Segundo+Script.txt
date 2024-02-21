@@ -1,0 +1,14 @@
+library(readr)
+# leitura com tabulação
+setwd("/cloud/project/importexport")
+timestab <- read_delim("times futebol paises - tabulacao.tab", delim = "\tab")
+head(timestab)
+
+# leitura com virgula
+setwd("/cloud/project/importexport")
+timesvirgula <- read_delim("times futebol paises - virgula.txt", delim = ",")
+head(timestab)
+
+# leitura na nuvem
+bolsavaloresnuvem <- read.table("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered.csv", header=T)
+head(bolsavaloresnuvem)

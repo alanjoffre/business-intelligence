@@ -1,0 +1,35 @@
+---
+title: "Exemplo"
+author: Treinamento R Markdown
+output: slidy_presentation
+---
+
+#Apresentação de Dados - Sesão 1
+
+## Primeira Fase
+
+- Tópico 1
+- Tópico 2
+
+## Segunda Fase
+
+- Tópico 3
+- Tópico 4
+
+# Apresentação de Dados - Sesão 2
+
+## Terceira Fase
+
+- Tópico 5
+- Tópico 6
+
+---
+
+```{r, echo=FALSE}
+pie(rep(1, 24), col = rainbow(24), radius = 0.9)
+```
+
+## Quarta Fase
+
+- Tópico 7
+- Tópico 8

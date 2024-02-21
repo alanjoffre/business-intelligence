@@ -1,0 +1,75 @@
+####################################
+#Analisando discursos dos presidentes
+####################################
+#http://www.itamaraty.gov.br/pt-BR/discursos-artigos-e-entrevistas-categoria/presidente-da-republica-federativa-do-brasil-discursos
+
+library(tm)
+library(NLP)
+setwd("/cloud/project/reportagem")
+arquivotxt <- c("/cloud/project/reportagem")
+textos <- VCorpus(DirSource(arquivotxt, encoding = "UTF-8"),readerControl = list(language = "lat"))
+
+#instalando pacotes
+install.packages("tidyr")
+install.packages("dplyr")
+install.packages("tidytext")
+install.packages("ggplot2") 
+install.packages("wordcloud") 
+install.packages("RColorBrewer")
+
+install.packages("lexiconPT") 
+install.packages("widyr")
+install.packages("ggraph")
+install.packages("igraph")
+library(lexiconPT)
+library(tidyr)
+library(dplyr)
+library(tidytext)
+library(tibble)
+library(ggplot2)
+library(RColorBrewer)
+library(wordcloud)
+library(widyr)
+library(ggraph)
+library(igraph)
+
+
+
+##### ajustes e transformações ######
+#Transformando de Corpus para Tibble
+discurso_presidente <-tidy(textos)
+
+#Retirando as palavras stopwords
+stopwords_pt <- c(stopwords("pt"), "é", "sr", "sra")
+stopwords_pt_df <- data.frame(word = stopwords_pt)
+discurso_presidente <- discurso_presidente %>%
+  unnest_tokens(word, text) %>%
+  anti_join(stopwords_pt_df, by = "word")
+
+# Contando as palavras mais comuns nos discursos de todos os presidentes
+discurso_presidente %>%
+  count(word, sort = TRUE)
+
+#Ordenando as palavras pelos discursos
+words_grupo <- discurso_presidente %>%
+  count(id, word, sort = TRUE) %>%
+  ungroup()
+
+#Correlacao entre os textos
+library(widyr)
+grupo_correlacao <- words_grupo %>%
+  pairwise_cor(id, word, n, sort = TRUE)
+
+
+#Gráfico com as correlação. correlação >=0.8 ou <=-0.8
+library(ggraph)
+library(igraph)
+grupo_correlacao %>%
+  filter(correlation > .004) %>%
+  graph_from_data_frame() %>%
+  ggraph(layout = "kk") +
+  geom_edge_link(aes(alpha = correlation, width = correlation)) +
+  geom_node_point(size = 9, color = "Red") +
+  geom_node_text(aes(label = name), repel = TRUE) +
+  theme(legend.position = 'bottom') +
+  theme_void()
